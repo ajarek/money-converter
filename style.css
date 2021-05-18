@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(darkgrey, black)
+}
+
+.container {
+    width: 320px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 2px outset #eee;
+    border-radius: 40px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.4), inset -4px -4px 15px 0px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 150px;
+    height: 28px;
+    background: black;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.display {
+    width: 300px;
+    height: 625px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    background: radial-gradient(#eee, #ddd);
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    width: 270px;
+    height: 125px;
+    background: hsl(174, 62%, 47%);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.input input::placeholder {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.input i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.select {
+    height: 125px;
+    width: 270px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: hsl(214, 35%, 37%);
+    position: relative;
+}
+
+label {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+select {
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+option {
+    color: white;
+}
+
+.select i,
+.score i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 99;
+}
+
+.score {
+    height: 125px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 10px;
+    background: orangered;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+}
+
+.score i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
